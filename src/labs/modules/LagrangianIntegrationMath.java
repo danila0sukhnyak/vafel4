@@ -58,8 +58,7 @@ public class LagrangianIntegrationMath {
                                 }
                             }
                         }catch (Exception e){
-                            System.out.println("Произошла ошибка при чтании файла");
-                            e.printStackTrace();
+                            System.out.println("Произошла ошибка при чтении файла");
                         }
                     } else{
                         System.out.println("Такого варианта нет");
@@ -96,7 +95,7 @@ public class LagrangianIntegrationMath {
             point.add(new Point(t, result));
             point_func.put("Точка Интерполяции", point);
             // Аппроксимирование
-            ArrayList<Point> interpolation = Interpolation(xy, 10);
+            ArrayList<Point> interpolation = Interpolation(xy, 100);
             point_func.put("Точки Интерполяции", interpolation);
             // Экстрополяция
             ArrayList<Point> extrapolation = Extrapolation(xy);
